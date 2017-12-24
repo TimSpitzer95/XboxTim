@@ -6,15 +6,12 @@ include_once("xboxon.php");
 $Alexa = new Alexa();
 $Xbox = new XboxOn();
 
-// Set alexa app specific data
-$Alexa->setApplicationID("amzn1.ask.skill.183eef65-4dae-469d-b629-743da85da484");  // Set the application ID for your skill here
-$Alexa->setApplicationName("Schalte die Xbox An");  // Change this to whatever you are calling your app
+$Alexa->setApplicationID("amzn1.ask.skill.183eef65-4dae-469d-b629-743da85da484");
+$Alexa->setApplicationName("Schalte die Xbox An");
 
-// Set Xbox IP address and live ID
-$Xbox->setIPAddress("192.168.178.60");  // Set the public IP address of your Xbox here
-$Xbox->setXboxLiveID("FD00039A078E82DA");  // Set the Xbox live ID here
+$Xbox->setIPAddress("192.168.178.60");
+$Xbox->setXboxLiveID("FD00039A078E82DA");
 
-// Authenticate request and execute
 if($Alexa->auth()) {
     if($Xbox->ping()) {
         $Alexa->setCard("Xbox is already on.");
