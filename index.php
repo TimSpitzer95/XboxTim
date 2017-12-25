@@ -7,7 +7,7 @@ $Alexa = new Alexa();
 $Xbox = new XboxOn();
 
 $Alexa->setApplicationID("amzn1.ask.skill.183eef65-4dae-469d-b629-743da85da484");
-$Alexa->setApplicationName("Schalte die Xbox An");
+$Alexa->setApplicationName("Xbox");
 
 $Xbox->setIPAddress("192.168.178.60");
 $Xbox->setXboxLiveID("FD00039A078E82DA");
